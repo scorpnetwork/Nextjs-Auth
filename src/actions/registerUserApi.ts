@@ -17,9 +17,9 @@ export async function register(formUser: TFormUser) {
   const EXPIRE_DAYS = 7;
   const DATE = new Date();
   DATE.setTime(DATE.getTime() + EXPIRE_DAYS * 24 * 60 * 60 * 1000);
-  const expires = `expires=${DATE.toUTCString()}`;
+  const expires = "expires="+DATE.toUTCString();
 
-  document.cookie = `token=${"DAKLfLKDO5778653DSA365A4FDSA6"}; ${expires}; path=/; secure; SameSite=Strict`;
+  document.cookie = `token=DAKLfLKDO5778653DSA365A4FDSA6; ${expires}; path=/; secure; SameSite=Strict`;
 
   //   return response.json();
 }

@@ -3,9 +3,9 @@ import cookie from "cookie";
 
 export function middleware(req: NextRequest) {
   const cookiesHeader = req.headers.get("cookie");
-  const parsedCookies = cookie.parse(cookiesHeader || "");
+  const parsedCookies = cookie.parse(cookiesHeader ?? "");
 
-  const token = parsedCookies["token"];
+  const token = parsedCookies.token;
 
   const protectedPaths = ["/auth/login", "/auth/register"];
 

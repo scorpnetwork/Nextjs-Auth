@@ -34,7 +34,7 @@ const FormSchema = z.object({
 
 export type TFormSchema = z.infer<typeof FormSchema>;
 
-type TFormProps = {
+interface TFormProps {
   isLoading: boolean;
   onSave: (form: TFormSchema) => void;
 };

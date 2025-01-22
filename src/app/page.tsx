@@ -10,7 +10,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Loader, Loader2, LogOutIcon } from "lucide-react";
+import { Loader2, LogOutIcon } from "lucide-react";
 import { useState } from "react";
 import cookie from "js-cookie";
 import { useRouter } from "next/navigation";
@@ -19,7 +19,7 @@ const Home = () => {
   const { replace } = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const handleLogout = () => {
-    setIsLoading((prev) => !prev);
+    setIsLoading(function(prev) { return !prev });
     cookie.remove("token");
 
     setTimeout(() => {

@@ -20,7 +20,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {icon && (
-          <div className="absolute right-5 top-5  transform -translate-y-1/2 h-4 w-4 text-gray-500 cursor-pointer">
+          <div className="absolute right-5 top-5  -translate-y-1/2 h-4 w-4 text-gray-500 cursor-pointer">
             {icon}
           </div>
         )}

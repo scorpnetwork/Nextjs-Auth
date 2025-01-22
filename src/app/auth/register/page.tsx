@@ -30,7 +30,7 @@ const page = () => {
       <Card className=" w-[300px]  md:w-[400px] m-5 p-5">
         <RegisterForm
           isLoading={isLoading}
-          onSave={(formUser) => handleRegisterUser(formUser)}
+          onSave={function(formUser) { return handleRegisterUser(formUser) }}
         />
       </Card>
     </div>

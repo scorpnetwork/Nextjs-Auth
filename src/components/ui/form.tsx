@@ -17,7 +17,7 @@ import { Label } from "@/components/ui/label"
 
 const Form = FormProvider
 
-type FormFieldContextValue<
+interface FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = {
@@ -55,9 +55,9 @@ const useFormField = () => {
   const { id } = itemContext
 
   return {
-    id,
+    id: id,
     name: fieldContext.name,
-    formItemId: `${id}-form-item`,
+    formItemId: ""+id+"-form-item",
     formDescriptionId: `${id}-form-item-description`,
     formMessageId: `${id}-form-item-message`,
     ...fieldState,
