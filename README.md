@@ -1,1 +1,1 @@
-![Codacy Analysis](https://github.com/scorpnetwork/Nextjs-Auth/actions/workflows/codacy-analysis.yml/badge.svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c5bd4ac4a45a446fa52ecfc7cd486873)](https://app.codacy.com?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
