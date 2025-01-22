@@ -1,0 +1,29 @@
+name: Codacy Analysis
+
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  codacy-analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          npm install  # Adjust this command based on your project (e.g., pip install for Python)
+
+      # Run Codacy analysis
+      - name: Codacy Analysis
+        uses: codacy/codacy-analysis-cli-action@v4
+        with:
+          token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          project-token-path: .codacy.project.token 
+          options: "--tool eslint"
