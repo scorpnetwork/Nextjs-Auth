@@ -3,10 +3,10 @@ name: Codacy Analysis
 on:
   push:
     branches:
-      - main  
+      - main
   pull_request:
     branches:
-      - main 
+      - main
 
 jobs:
   codacy-analysis:
@@ -18,12 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install  # Adjust this command based on your project (e.g., pip install for Python)
+          npm install  # adjust this command to your project's needs
 
-      # Run Codacy analysis
       - name: Codacy Analysis
         uses: codacy/codacy-analysis-cli-action@v4
-        with:
-          token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          project-token-path: .codacy.project.token 
-          options: "--tool eslint"
